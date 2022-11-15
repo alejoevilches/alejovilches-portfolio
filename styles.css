@@ -19,12 +19,18 @@
     src: url(/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf);
 }
 
+@font-face {
+  font-family: "Source Sans PRO Regular";
+  src: url(/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+
 :root{
     --background-color1:#F2E9DD;
     --h1-font:"Source Sans PRO Semibold";
     --main-textcolor:#222222;
     --light-font:"Source Sans PRO Light";
-    --regular-font:"Source Sans PRO Bold";
+    --bold-font:"Source Sans PRO Bold";
+    --regular-font:"Source Sans PRO Regular";
 }
 
 body{
@@ -130,12 +136,87 @@ body{
   .hero-grid div{
     font-family:var(--light-font);
     font-size:2em;
+    gap:100px;
   }
 
   .hero-grid div:first-of-type{
     display:flex;
     flex-direction: column-reverse;
-    padding:15vh 5vw 15vh 0;
-    justify-content: space-between;
+    padding-right:5vw;
+    justify-content: center;
     text-align:right;
   }
+
+  .hero-grid div:last-of-type{
+    display:flex;
+    align-items: center;
+    padding-left: 5vw;
+  }
+
+  .hero-grid a{
+    text-decoration: none;
+    color:black;
+  }
+
+.grow { 
+  transition: all .1s ease-in-out;
+  }
+  
+  .grow:hover { 
+    transform: scale(1.2);
+    color:red;
+  }
+
+/* A partir de ahora, este es el código de estilos de la pagina "About Me" */
+
+.pages_navbar{
+  padding:0 10px;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  height:6vh;
+  border-bottom:1px solid var(--main-textcolor);
+  font-size: 1.4em;
+  font-family:var(--regular-font);
+}
+
+.pages_navbar a{
+  text-decoration:none;
+  color:var(--main-textcolor)
+}
+
+.pages_navbar a:hover{
+  font-family: var(--h1-font);
+}
+
+.aboutme_photo img{
+  width:30vw;
+  clip-path: circle(40% at 50% 40%);
+}
+
+main{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  height:94vh;
+}
+
+.aboutme_text h1{
+  font-family: var(--h1-font);
+  font-size:3em;
+  padding-bottom:20px;
+}
+
+.aboutme_text{
+  font-family: var(--regular-font);
+  width:40vw;
+  margin-left:10vw;
+  color:var(--main-textcolor);
+}
+
+.aboutme_text p{
+  padding-bottom:10px;
+  font-size:1.2em;
+}
