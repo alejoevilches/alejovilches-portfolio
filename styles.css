@@ -193,6 +193,13 @@ body{
 .aboutme_photo img{
   width:30vw;
   clip-path: circle(40% at 50% 40%);
+  margin-top:20vh;
+  margin-right:10vw;
+}
+
+.aboutme_image{
+  display:flex;
+  align-items: center;
 }
 
 main{
@@ -200,7 +207,7 @@ main{
   flex-direction:row;
   align-items: center;
   justify-content: space-between;
-  height:94vh;
+  height:80vh;
 }
 
 .aboutme_text h1{
@@ -219,4 +226,14 @@ main{
 .aboutme_text p{
   padding-bottom:10px;
   font-size:1.2em;
+}
+
+.stacklogos{
+  text-align: center;
+  font-size:3em;
+  color:var(--main-textcolor)
+}
+
+.stacklogos i{
+  padding:0 10px;
 }
