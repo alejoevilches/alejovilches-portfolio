@@ -158,6 +158,10 @@ body{
     color:black;
   }
 
+  .heroimage_responsive{
+    display:none;
+  }
+
 .grow { 
   transition: all .1s ease-in-out;
   }
@@ -194,6 +198,8 @@ body{
 
 .aboutme_photo img{
   width:30vw;
+  min-width: 300px;
+  max-width:500px;
   clip-path: circle(40% at 50% 40%);
   margin-top:10vh;
   margin-right:10vw;
@@ -210,13 +216,13 @@ body{
   flex-direction:row;
   align-items: center;
   justify-content: space-between;
-  height:80vh;
 }
 
 .aboutme_text h1{
   font-family: var(--h1-font);
   font-size:3em;
   padding-bottom:20px;
+  padding-top:20px;
 }
 
 .aboutme_text{
@@ -224,6 +230,11 @@ body{
   width:40vw;
   margin-left:10vw;
   color:var(--main-textcolor);
+}
+
+.aboutme_text a{
+  text-decoration:underline;
+  color:inherit;
 }
 
 .aboutme_text p{
@@ -282,4 +293,82 @@ body{
   padding-left:5px;
   margin-right:5px;
   color:var(--main-textcolor);
+}
+
+@media screen and (max-width: 800px) {
+
+  .aboutme_container{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .aboutme_text{
+    padding:0 50px;
+    margin:0;
+    width:100%;
+  }
+
+  .aboutme_photo img{
+    margin:0;
+    padding:0;
+  }
+
+  .stacklogos{
+    margin-top:20px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .hero h1{
+    font-size: 8em;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .hero h1{
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .hero-grid{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .hero-grid div{
+    display:flex;
+    margin:0;
+    padding:0;
+    gap:10px;
+    align-items: center;
+  }
+
+  .hero-grid div:last-of-type{
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .hero-grid div:first-of-type{
+    padding:0;
+  }
+
+  .heroimage_responsive{
+    display:block;
+    margin-bottom: 5vh;
+  }
+
+  .heroimage_desktop{
+    display:none;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .hero h1{
+    font-size: 4em;
+  }
+
 }
