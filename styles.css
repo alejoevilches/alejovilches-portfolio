@@ -372,3 +372,10 @@ body{
   }
 
 }
+
+@media screen and (max-width:450px) {
+  .pages_navbar{
+    font-size: 1em;
+  }
+
+}
